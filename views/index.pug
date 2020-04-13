@@ -1,0 +1,23 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Weather
+  link(rel='stylesheet' href='index_style.css' type='text/css')
+h1 Weather Forecast
+center
+  fieldset
+    form(action='/weather')
+      input(type='text' placeholder='City name' name='city')
+      br
+      br
+      input(type='submit' value='submit')
+center
+  img(src='http://openweathermap.org/img/w/#{weather.icon}.png' alt='Image' )
+  h2 City name:  #{weather.city}
+  br
+  p Temperature: #{weather.temperature}
+  br
+  p Description: #{weather.description}
+  br
+
